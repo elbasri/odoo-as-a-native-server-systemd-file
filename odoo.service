@@ -8,8 +8,8 @@ WantedBy=multi-user.target
 
 [Service]
 Type=forking
-User=odoo
-Group=odoo
+User=root
+Group=root
 ExecStart=/etc/init.d/odoo-server start
 ExecStop=/etc/init.d/odoo-server stop
 ExecRestart=/etc/init.d/odoo-server force-restart 
