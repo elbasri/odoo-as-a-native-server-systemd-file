@@ -1,0 +1,17 @@
+
+[Unit]
+Description=Odoo Server by www.NACER.ma
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=forking
+User=odoo
+Group=odoo
+ExecStart=/etc/init.d/bin/odoo-server start
+ExecStop=/etc/init.d/bin/odoo-server stop
+ExecRestart=/etc/init.d/bin/odoo-server force-restart 
+TimeoutSec=600
+Restart=on-failure
